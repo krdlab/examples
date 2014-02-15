@@ -1,0 +1,43 @@
+name:                simple-scotty-webapp
+version:             0.1.0.0
+-- synopsis:            
+-- description:         
+license:             BSD3
+license-file:        LICENSE
+author:              krdlab
+maintainer:          krdlab@gmail.com
+-- copyright:           
+-- category:            
+build-type:          Simple
+-- extra-source-files:  
+cabal-version:       >=1.10
+
+executable simple-scotty-webapp
+  default-language:
+    Haskell2010
+  hs-source-dirs:
+    src
+  main-is:
+    Main.hs
+  -- other-modules:       
+  other-extensions:
+      OverloadedStrings
+    , EmptyDataDecls
+    , FlexibleContexts
+    , GADTs
+    , QuasiQuotes
+    , TemplateHaskell
+    , TypeFamilies
+  build-depends:
+      base >=4.6 && <4.7
+    , scotty >=0.6 && <0.7
+    , wai-middleware-static
+    , wai-extra
+    , persistent
+    , persistent-template
+    , persistent-sqlite
+    , transformers
+    , resourcet
+    , monad-logger
+    , text >=0.11 && <0.12
+    , time >=1.4 && <1.5

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <title>Simple Memo</title>
+        <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="main.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+        <script>
+            $(function() {
+                var prepend_memo = function(memo, $memos) {
+                    $memos.prepend(
+                        $('<li/>')
+                            .addClass('list-group-item')
+                            .attr('id', 'memo-'+memo.id)
+                            .text(memo.content)
+                    );
+                };
+
+                $('#form_memos :submit').click(function(e) {
+                    var $content = $('textarea[name=content]');
+                    var data = {
+                        content: $content.val()
+                    };
+                    $.ajax({type: 'post', url: '/memos', processData: false, contentType: 'application/json', data: JSON.stringify(data)})
+                        .done(function(res) {
+                            $content.val('');
+                            prepend_memo(res, $('#memos'));
+                        })
+                        .fail(function(xhr, txt, err) {
+                            alert(err)
+                        });
+                    e.preventDefault();
+                    return false;
+                });
+
+                $.ajax({type: 'get', url: '/memos', dataType: 'json'})
+                    .done(function(res) {
+                        var $memos = $('#memos').empty();
+                        $.each(res, function() { prepend_memo(this, $memos); });
+                    })
+                    .fail(function(xhr, txt, err) {
+                        alert(err)
+                    });
+            });
+        </script>
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <form id="form_memos" role="form" method="post" action="/memos">
+                        <div class="form-group">
+                            <textarea class="form-control" rows="3" name="content"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Save</button>
+                    </form>
+                    <ul id="memos" class="list-group">
+                        <li id="memo-1" class="list-group-item">hoge</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
