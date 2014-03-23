@@ -1,0 +1,10 @@
+# Try purescript
+
+```sh
+$ npm install
+$ bower install
+$ grunt
+$ grunt server
+```
+
+Open <http://localhost:9000/>

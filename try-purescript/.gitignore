@@ -1,0 +1,5 @@
+/node_modules/
+/dst/*
+/build/*
+/bower_components
+/app/scripts/*
