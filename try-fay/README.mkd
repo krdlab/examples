@@ -1,0 +1,10 @@
+# Try Fay
+
+```sh
+$ npm install
+$ grunt
+$ grunt server
+```
+
+Open <http://localhost:9000>
+
