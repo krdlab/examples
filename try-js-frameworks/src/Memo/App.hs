@@ -1,7 +1,7 @@
 {-# LANGUAGE OverloadedStrings #-}
 module Memo.App (app) where
 
-import Web.Scotty (ScottyM, ActionM, middleware, get, file, post, jsonData, json, delete, param)
+import Web.Scotty (ScottyM, ActionM, middleware, get, post, jsonData, json, delete, param)
 import Network.Wai.Middleware.Static (staticPolicy, (>->), noDots, addBase)
 import Network.Wai.Middleware.RequestLogger (logStdoutDev)
 import Data.IORef
@@ -14,8 +14,6 @@ app :: IORef MemoryStore -> ScottyM ()
 app store = do
     middleware logStdoutDev
     middleware $ staticPolicy $ noDots >-> addBase "app"
-
-    get "/" $ file "app/index.html"
 
     get "/memos" $ do
         memos <- listMemos

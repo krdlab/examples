@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <title>Vue.js test</title>
+    </head>
+    <body>
+        <div id="memo-app">
+            <h1>{{title}}</h1>
+            <input
+                autoforcus autocomplete="off" placeholder="New memo"
+                v-model="newMemo.content"
+                v-on="keyup: postMemo | key enter" />
+            <ul>
+                <li v-repeat="memos" class="memo-{{id}}">
+                    <span>{{content}}</span> <span v-on="click: deleteMemo(this)">[x]</span>
+                </li>
+            </ul>
+        </div>
+        <script src="/bower_components/jquery/dist/jquery.js"></script>
+        <script src="/bower_components/vue/dist/vue.js"></script>
+        <script src="js/home.js"></script>
+    </body>
+</html>

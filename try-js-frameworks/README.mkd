@@ -1,13 +1,20 @@
 # Try JavaScript frameworks
 
+## Prepare
+
+```sh
+$ cd try-js-frameworks
+$ bower install
+$ cabal sandbox init && cabal install
+```
+
 ## Run
 
 ```sh
-$ cabal sandbox init && cabal install
 $ ./.cabal-sandbox/bin/try-js-frameworks
 ```
 
-## Check
+## Check API
 
 ```sh
 $ curl http://localhost:3000/memo
@@ -21,5 +28,17 @@ $ curl -v \
 
 $ curl -X DELETE http://localhost:3000/memos/1
 ```
+
+## Vue.js
+
+<http://localhost:3000/vue/home.html>
+
+## AngularJS
+
+TODO
+
+## Backbone.js
+
+TODO
 
 

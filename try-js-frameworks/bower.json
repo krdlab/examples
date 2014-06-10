@@ -1,0 +1,22 @@
+{
+  "name": "try-js-frameworks",
+  "version": "0.0.0",
+  "private": true,
+  "homepage": "https://github.com/krdlab/examples/try-js-frameworks",
+  "authors": [
+    "krdlab <krdlab@gmail.com>"
+  ],
+  "description": "experimental project",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "vue": "~0.10.5",
+    "jquery": "~2.1.1"
+  }
+}
