@@ -1,0 +1,25 @@
+# Try JavaScript frameworks
+
+## Run
+
+```sh
+$ cabal sandbox init && cabal install
+$ ./.cabal-sandbox/bin/try-js-frameworks
+```
+
+## Check
+
+```sh
+$ curl http://localhost:3000/memo
+
+$ curl -v \
+       -H "Accept: application/json" \
+       -H "Content-type: application/json" \
+       -X POST \
+       -d '{"content":"Hello!"}' \
+       http://localhost:3000/memos
+
+$ curl -X DELETE http://localhost:3000/memos/1
+```
+
+
