@@ -1,0 +1,17 @@
+{
+  "name": "try-js-frameworks",
+  "version": "0.0.0",
+  "private": true,
+  "description": "experimental project",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "krdlab",
+  "license": "MIT",
+  "devDependencies": {
+    "vue": "^0.10.5",
+    "jquery": "^2.1.1",
+    "director": "^1.2.3",
+    "partialify": "^3.1.1"
+  }
+}

@@ -1,0 +1,5 @@
+<ul>
+    <li v-repeat="memos" class="memo-{{id}}">
+        <span>{{content}}</span> <span v-on="click: deleteMemo(this)">[x]</span>
+    </li>
+</ul>

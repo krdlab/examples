@@ -1,7 +1,18 @@
+var Vue = require('vue');
+var director = require('director');
+var $ = require('jquery')
+
 $(function() {
     var ajax_alert = function(_, _, err) {
         alert(err);
     };
+
+    Vue.component('all', {
+        template: require('./components/all.html')
+    });
+    Vue.component('dummy', {
+        template: require('./components/dummy.html')
+    });
 
     var app = new Vue({
         el: '#memo-app',
@@ -10,7 +21,8 @@ $(function() {
             memos: [],
             newMemo: {
                 content: ''
-            }
+            },
+            currentView: 'all'
         },
         methods: {
             postMemo: function() {
@@ -36,6 +48,12 @@ $(function() {
             }
         }
     });
+
+    director.Router({
+        'all': function() { app.currentView = 'all'; },
+        'dummy': function() { app.currentView = 'dummy'; }
+    })
+    .init();
 
     $.ajax({type: 'GET', url: '/memos', dataType: 'json'})
         .done(function(data) {
