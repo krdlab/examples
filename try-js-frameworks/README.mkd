@@ -4,7 +4,8 @@
 
 ```sh
 $ cd try-js-frameworks
-$ bower install
+$ npm install
+$ grunt
 $ cabal sandbox init && cabal install
 ```
 
