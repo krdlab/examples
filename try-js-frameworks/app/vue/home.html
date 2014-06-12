@@ -9,14 +9,11 @@
                 autoforcus autocomplete="off" placeholder="New memo"
                 v-model="newMemo.content"
                 v-on="keyup: postMemo | key enter" />
-            <ul>
-                <li v-repeat="memos" class="memo-{{id}}">
-                    <span>{{content}}</span> <span v-on="click: deleteMemo(this)">[x]</span>
-                </li>
-            </ul>
+            <div>
+                <a href="#/all">All</a> | <a href="#/dummy">Dummy</a>
+            </div>
+            <div v-view="currentView"></div>
         </div>
-        <script src="/bower_components/jquery/dist/jquery.js"></script>
-        <script src="/bower_components/vue/dist/vue.js"></script>
-        <script src="js/home.js"></script>
+        <script src="bundle.js"></script>
     </body>
 </html>

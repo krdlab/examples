@@ -16,7 +16,5 @@
     "tests"
   ],
   "devDependencies": {
-    "vue": "~0.10.5",
-    "jquery": "~2.1.1"
   }
 }
