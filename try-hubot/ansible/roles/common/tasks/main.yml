@@ -1,0 +1,19 @@
+
+- name: Install sysstat
+  sudo: yes
+  yum: name=sysstat state=present
+
+- name: Start sysstat
+  sudo: yes
+  service: name=sysstat state=started enabled=yes
+
+- name: Install tools
+  sudo: yes
+  yum: name={{ item }} state=present
+  with_items:
+    - vim
+    - lsof
+    - nmap
+    - git
+    - man
+

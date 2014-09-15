@@ -1,0 +1,11 @@
+---
+# file: roles/hubot/tasks/main.yml
+
+- name: Install CoffeeScript
+  sudo: yes
+  npm: name=coffee-script global=yes
+
+- name: Install hubot
+  sudo: yes
+  npm: name=hubot global=yes
+
