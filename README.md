@@ -13,6 +13,8 @@ example projects
     * Fay の勉強
 * try-haxe
     * Haxe の勉強
+* try-hubot
+    * hubot の勉強
 * try-js-frameworks
     * JavaScript framework の勉強
 * try-purescript
