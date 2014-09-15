@@ -1,0 +1,11 @@
+---
+# file: site.yml
+- hosts:
+    - hubot-server
+  sudo: no
+  roles:
+    - epel
+    - common
+    - node
+    - hubot
+

@@ -1,0 +1,11 @@
+---
+# file: roles/node/tasks/main.yml
+
+- name: Install node
+  sudo: yes
+  yum: name={{ item }} state=present
+  with_items:
+    - gcc-c++
+    - nodejs
+    - npm
+

@@ -1,0 +1,17 @@
+# Try hubot
+
+[hubot](https://hubot.github.com/)
+
+## Prepare
+
+```sh
+$ cd ansible && ansible-playbook -i local -u vagrant site.yml
+```
+
+## Run
+
+```sh
+$ cd test
+$ bin/hubot
+```
+

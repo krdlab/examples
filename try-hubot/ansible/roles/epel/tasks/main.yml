@@ -1,0 +1,10 @@
+---
+# file: roles/epel/tasks/main.yml
+
+- get_url: >
+    url=http://dl.fedoraproject.org/pub/epel/6/x86_64/epel-release-6-8.noarch.rpm
+    dest=/tmp/epel-release-6-8.noarch.rpm
+
+- yum: name=/tmp/epel-release-6-8.noarch.rpm state=present
+  sudo: yes
+
