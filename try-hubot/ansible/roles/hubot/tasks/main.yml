@@ -9,3 +9,11 @@
   sudo: yes
   npm: name=hubot global=yes
 
+- name: Install redis
+  sudo: yes
+  yum: name=redis state=present
+
+- name: Start redis
+  sudo: yes
+  service: name=redis state=started enabled=yes
+
