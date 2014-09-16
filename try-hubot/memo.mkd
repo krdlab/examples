@@ -52,9 +52,19 @@
     * [express](http://expressjs.com/guide.html) が入っている
     * `robot.router.post '/path/to/resource', (req, res) ->`
 
-## Adapter の作り方
+## Adapter
 
-TODO
+* [adapter.coffee](https://github.com/github/hubot/blob/master/src/adapter.coffee)
+    * Adapter 実装のベース
+    * extends EventEmitter
+    * `run`
+        * サービスと接続してデータのやりとりを開始する
+    * `send`
+        * サービスにデータを送信する基本メソッド
+
+```sh
+$ bin/hubot --adapter MyAdapter
+```
 
 
 /以上
