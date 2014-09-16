@@ -1,0 +1,60 @@
+# hubot メモ
+
+[docs/scripting](https://github.com/github/hubot/blob/master/docs/scripting.md)
+
+## robot
+
+* robot.hear
+    * 正規表現にマッチしたら反応する
+* robot.respond
+    * ロボット名があり，かつ正規表現にマッチした場合にのみ反応する
+* robot.enter
+    * ユーザが入ってきたら
+* robot.leave
+    * ユーザが出て行ったら
+
+## msg?
+
+[Response](https://github.com/github/hubot/blob/master/src/response.coffee) のインスタンス．
+プロパティとして robot, message, match, envelope を持つ．
+
+* match
+    * Regex match (JavaScript)
+* envelop
+    * { room: ..., user: ..., message: ... }
+
+## Event
+
+[EventEmitter](http://nodejs.org/api/events.html#events_class_events_eventemitter) を使うことが出来る．
+
+* `robot.emit "event-name", { ... }`
+    * イベント投入
+* `robot.on "event-name", (data) ->`
+    * イベント処理
+
+## Error Handling
+
+* `robot.error (err, msg) ->`
+
+## Brain
+
+* [brain](https://github.com/github/hubot/blob/master/src/brain.coffee)
+    * in-memory key-value store
+* [redis-brain](https://github.com/github/hubot-scripts/blob/master/src/scripts/redis-brain.coffee)
+    * `export REDIS_URL=redis://hostname:port/prefix` しなかった場合，`redis://localhost:6379/hubot` が使用される
+    * 実際のキーは `"#{prefix}:storage"` となる
+
+## その他
+
+* setTimeout/setInterval はそのまま使える
+
+* HTTP リクエストを受けることも出来る
+    * [express](http://expressjs.com/guide.html) が入っている
+    * `robot.router.post '/path/to/resource', (req, res) ->`
+
+## Adapter の作り方
+
+TODO
+
+
+/以上
