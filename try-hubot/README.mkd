@@ -15,3 +15,24 @@ $ cd test
 $ bin/hubot
 ```
 
+## Try adapter
+
+```sh
+$ cd test-server && cabal sandbox init && cabal install --only-dependencies
+$ ./dist/build/test-server/test-server
+```
+```sh
+$ cd test
+$ bin/hubot -a oneroom
+```
+```sh
+$ curl -v \
+       -H "Accept: application/json" \
+       -H "Content-type: application/json" \
+       -X POST \
+       -d '{"content":"hubot ping","name":"krdlab"}' \
+       http://localhost:3000/memos
+
+$ curl http://localhost:3000/memos?since=0
+```
+
