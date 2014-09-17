@@ -3,6 +3,7 @@ module App where
 import Prelude
 import Data.Either
 import Data.Foreign
+import Data.Foreign.Class
 import qualified Control.Monad.JQuery as J
 
 run = do
@@ -19,12 +20,12 @@ run = do
         >>= J.css { color: "red" }
     J.append p b
 
-    flip (J.on "keyup") i $ do
+    flip (J.on "keyup") i $ \_ _ -> do
         name <- getString i
         J.setText ("Hello, " ++ name) p
 
 getString jq = do
-    res <- parseForeign read <$> J.getValue jq
+    res <- read <$> J.getValue jq
     case res of
         Left _  -> return ""
         Right s -> return s
