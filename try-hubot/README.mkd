@@ -18,7 +18,7 @@ $ bin/hubot
 ## Try adapter
 
 ```sh
-$ cd test-server && cabal sandbox init && cabal install --only-dependencies
+$ cd test-server && cabal sandbox init && cabal install --only-dependencies && cabal build
 $ ./dist/build/test-server/test-server
 ```
 ```sh
