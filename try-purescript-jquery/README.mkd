@@ -1,0 +1,22 @@
+# Try purescript
+
+## Prepare
+
+```sh
+$ cabal get purescript
+$ cd purescript-x.y.z
+$ cabal sandbox init && cabal install
+$ cd ../
+$ export PATH=$PATH:./purescript-x.y.z/.cabal-sandbox/bin
+```
+
+## Run
+
+```sh
+$ npm install
+$ bower install
+$ grunt
+$ grunt server
+```
+
+Open <http://localhost:9000/>
