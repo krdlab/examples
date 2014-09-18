@@ -3,3 +3,4 @@
 /purescript-*
 /dst
 /.psci_modules
+/.psci

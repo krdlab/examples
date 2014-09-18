@@ -12,6 +12,7 @@ module.exports = (grunt) ->
           modules: "Main"
         src: ['<%= grunt.cli.options.src %>', '<%= libs %>']
         dest: 'dst/index.js'
+    dotPsci: ['<%= libs %>']
     clean:
       build: ["dst"]
     execute:
@@ -20,5 +21,5 @@ module.exports = (grunt) ->
 
   require('load-grunt-tasks')(grunt)
 
-  grunt.registerTask 'default', ['clean', 'psc']
+  grunt.registerTask 'default', ['clean', 'psc', 'dotPsci']
   grunt.registerTask 'run', ['execute']
