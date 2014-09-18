@@ -1,0 +1,21 @@
+{
+  "name": "try-purescript",
+  "version": "0.0.0",
+  "private": true,
+  "homepage": "https://github.com/krdlab/examples/try-purescript",
+  "authors": [
+    "krdlab <krdlab@gmail.com>"
+  ],
+  "description": "a practice",
+  "moduleType": [
+    "node"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

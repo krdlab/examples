@@ -1,0 +1,18 @@
+{
+  "name": "try-purescript",
+  "version": "0.0.0",
+  "description": "a practice",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "krdlab",
+  "private": true,
+  "license": "MIT",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-execute": "^0.2.2",
+    "grunt-purescript": "^0.5.1",
+    "grunt-contrib-clean": "^0.6.0",
+    "load-grunt-tasks": "^0.6.0"
+  }
+}

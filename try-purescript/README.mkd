@@ -1,0 +1,34 @@
+# Try PureScript
+
+## Requirements
+
+* [node](http://nodejs.org/)
+* [npm](https://www.npmjs.org/)
+* [grunt-cli](http://gruntjs.com/)
+* [bower](http://bower.io/)
+* [Haskell Platform](https://www.haskell.org/platform/)
+
+## Prepare
+
+```sh
+$ cabal get purescript
+$ cd purescript-x.y.z
+$ cabal sandbox init && cabal install
+$ cd ..
+$ export PATH=$PATH:./purescript-x.y.z/.cabal-sandbox/bin
+$ psc --version
+x.y.z
+```
+
+```sh
+$ npm install
+$ bower install
+```
+
+## Run
+
+```sh
+$ grunt --src /path/to/targetfile
+$ grunt run
+```
+
