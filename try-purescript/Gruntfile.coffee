@@ -2,8 +2,7 @@ module.exports = (grunt) ->
   grunt.initConfig
     pkg: grunt.file.readJSON 'package.json'
     libs: [
-      'bower_components/purescript-*/**/*.purs',
-      'bower_components/purescript-*/**/*.purs.hs'
+      'bower_components/purescript-*/src/**/*.purs'
     ]
     psc:
       build:
