@@ -2,3 +2,4 @@
 /bower_components
 /purescript-*
 /dst
+/.psci_modules
