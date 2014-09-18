@@ -17,6 +17,8 @@ example projects
     * hubot の勉強
 * try-js-frameworks
     * JavaScript framework の勉強
+* try-purescript
+    * PureScirpt を色々試すためのプロジェクト
 * try-purescript-jquery
     * PureScript の勉強 (jQuery メイン)
 
