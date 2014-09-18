@@ -19,6 +19,7 @@
     "tests"
   ],
   "devDependencies": {
-    "purescript-math": "~0.1.0"
+    "purescript-math": "~0.1.0",
+    "purescript-lists": "~0.2.0"
   }
 }
