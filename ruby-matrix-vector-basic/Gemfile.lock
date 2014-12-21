@@ -1,0 +1,10 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    gnuplot (2.6.2)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  gnuplot

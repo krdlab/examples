@@ -7,6 +7,8 @@ example projects
 
 * delimited-continuation
     * shift/reset の勉強
+* ruby-matrix-vector-basic
+    * 標準ライブラリの matrix
 * simple-scotty-webapp
     * 2014/02/16: ゆるふわ Haskell
 * try-fay
