@@ -7,6 +7,8 @@ example projects
 
 * delimited-continuation
     * shift/reset の勉強
+* haskell-servant-webapp
+    * haskell-servant を試してみた
 * ruby-matrix-vector-basic
     * 標準ライブラリの matrix
 * simple-scotty-webapp
