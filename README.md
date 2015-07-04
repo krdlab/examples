@@ -13,6 +13,8 @@ example projects
     * 標準ライブラリの matrix
 * simple-scotty-webapp
     * 2014/02/16: ゆるふわ Haskell
+* try-electron
+    * Electron + Vue.js
 * try-fay
     * Fay の勉強
 * try-haxe

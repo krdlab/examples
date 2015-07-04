@@ -1,0 +1,31 @@
+# Test electron
+
+## Build
+
+```sh
+$ npm install -g grunt-cli electron-prebuilt electron-packager
+```
+```
+$ npm install
+$ bower install
+$ grunt
+```
+
+## Run
+
+```sh
+$ electron app
+```
+
+## Package
+
+```sh
+$ grunt package
+## => packages are saved into 'dist'
+```
+
+## Links
+
+* [atom/electron](https://github.com/atom/electron)
+* [maxogden/electron-packager](https://github.com/maxogden/electron-packager)
+

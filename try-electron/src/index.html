@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Test Electron</title>
+    </head>
+    <body id="app">
+        <h1>{{message}}</h1>
+        <div v-show="!initialized">
+            <pre>waiting...</pre>
+        </div>
+        <div v-show=" initialized">
+            <pre>{{response | json 2}}</pre>
+            <div>
+                <input type="text" v-model="input_text" />
+                <p>{{input_text}}</p>
+            </div>
+        </div>
+        <script src="bower_components/vue/dist/vue.js"></script>
+        <script src="bower_components/jquery/dist/jquery.js"></script>
+        <script src="jquery-loader.js"></script>
+        <script src="index.js"></script>
+    </body>
+</html>
