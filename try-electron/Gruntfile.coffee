@@ -2,7 +2,7 @@ module.exports = (grunt) ->
   require('load-grunt-tasks') grunt
 
   deps = (grunt.file.readJSON 'package.json').dependencies
-  includes = (k for k, v of deps)
+  includes = (k + '/**/*' for k, v of deps)
 
   grunt.initConfig
     pkg: grunt.file.readJSON 'package.json'
