@@ -36,11 +36,12 @@ module.exports = (grunt) ->
         ]
         tasks: ['copy']
     electron:
+      options:
+        name: '<%= pkg.name %>'
+        dir: 'app'
+        version: '0.29.1'
       linux:
         options:
-          name: '<%= pkg.name %>'
-          dir: 'app'
-          version: '0.29.1'
           platform: 'linux'
           arch: 'x64'
           out: 'dist/linux'
