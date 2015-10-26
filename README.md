@@ -9,6 +9,8 @@ example projects
     * shift/reset の勉強
 * haskell-servant-webapp
     * haskell-servant を試してみた
+* python-mcmc
+    * Python の MCMC ライブラリ ([PyMC3](https://github.com/pymc-devs/pymc3))
 * ruby-matrix-vector-basic
     * 標準ライブラリの matrix
 * simple-scotty-webapp
