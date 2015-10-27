@@ -7,6 +7,8 @@ example projects
 
 * delimited-continuation
     * shift/reset の勉強
+* haskell-io-test
+    * IO action モック化の実験
 * haskell-servant-webapp
     * haskell-servant を試してみた
 * python-mcmc
