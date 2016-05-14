@@ -1,0 +1,27 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+Vagrant.configure(2) do |config|
+  config.vm.box = "bento/centos-6.7"
+  # config.vm.box_check_update = false
+  # config.vm.synced_folder "../data", "/vagrant_data"
+
+  config.vm.provider "virtualbox" do |vb|
+    vb.memory = "1024"
+  end
+
+  config.vm.define :rabbit1 do |rabbit|
+    rabbit.vm.network :private_network, ip: "192.168.33.40"
+    rabbit.vm.hostname = "rabbit1"
+  end
+  config.vm.define :rabbit2 do |rabbit|
+    rabbit.vm.network :private_network, ip: "192.168.33.41"
+    rabbit.vm.hostname = "rabbit2"
+  end
+  config.vm.define :rabbit3 do |rabbit|
+    rabbit.vm.network :private_network, ip: "192.168.33.42"
+    rabbit.vm.hostname = "rabbit3"
+  end
+
+  config.vm.provision "shell", path: "provision.sh"
+end

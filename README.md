@@ -7,6 +7,8 @@ example projects
 
 * delimited-continuation
     * shift/reset の勉強
+* distributed-rabbitmq-brokers
+    * RabbitMQ 分散構成の調査
 * haskell-io-test
     * IO action モック化の実験
 * haskell-servant-webapp

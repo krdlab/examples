@@ -1,0 +1,47 @@
+---
+
+- hosts: 127.0.0.1
+  become: yes
+  tasks:
+    - name: Install basic packages
+      yum: name={{ item }} state=present
+      with_items:
+        - man
+        - vim
+        - htop
+        - iftop
+        - nmap
+        - lsof
+        - dsniff
+        - sysstat
+        - gcc
+        - gcc-c++
+        - make
+        - autoconf
+        - ncurses-devel
+
+    - name: Download erlang RPM
+      get_url:
+        url=https://www.rabbitmq.com/releases/erlang/erlang-18.3-1.el6.x86_64.rpm
+        dest=/usr/local/src/erlang-18.3-1.el6.x86_64.rpm
+        sha256sum=8d6e44cbf07333ad99c1aece8b267a1d079f9afc08bbaea49061571364f9d0f7
+        force=yes
+
+    - name: Install erlang
+      yum: name=/usr/local/src/erlang-18.3-1.el6.x86_64.rpm state=present
+
+    - name: Download RabbitMQ RPM
+      get_url:
+        url=https://www.rabbitmq.com/releases/rabbitmq-server/v3.6.1/rabbitmq-server-3.6.1-1.noarch.rpm
+        dest=/usr/local/src/rabbitmq-server-3.6.1-1.noarch.rpm
+        sha256sum=b688950915289a8596bdce35086b00ad08ee0e32567396c5bda850854642fac7
+        force=yes
+
+    - name: Install RabbitMQ
+      yum: name=/usr/local/src/rabbitmq-server-3.6.1-1.noarch.rpm state=present
+
+    - name: Copy configuration (does not restart)
+      copy:
+        src=rabbitmq.config
+        dest=/etc/rabbitmq/rabbitmq.config
+        owner=rabbitmq group=rabbitmq mode=644
