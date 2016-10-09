@@ -19,6 +19,8 @@ example projects
     * 標準ライブラリの matrix
 * simple-scotty-webapp
     * 2014/02/16: ゆるふわ Haskell
+* try-chainer
+    * 「Chainer による実践深層学習」を使った勉強
 * try-electron
     * Electron + Vue.js
 * try-fay
@@ -33,4 +35,3 @@ example projects
     * PureScirpt を色々試すためのプロジェクト
 * try-purescript-jquery
     * PureScript の勉強 (jQuery メイン)
-
