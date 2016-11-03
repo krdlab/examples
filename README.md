@@ -35,3 +35,5 @@ example projects
     * PureScirpt を色々試すためのプロジェクト
 * try-purescript-jquery
     * PureScript の勉強 (jQuery メイン)
+* try-webpack-and-babel
+    * webpack と babel の組み合わせを試す

@@ -4,3 +4,4 @@ tmp/
 cabal.sandbox.config
 .cabal-sandbox/
 .stack-work/
+node_modules/

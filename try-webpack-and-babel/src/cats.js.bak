@@ -1,0 +1,2 @@
+var cats = ['tama', 'kuro', 'taro'];
+module.exports = cats;
