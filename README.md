@@ -25,6 +25,8 @@ example projects
     * Electron + Vue.js
 * try-fay
     * Fay の勉強
+* try-haskell-servant-auth
+    * Authentication in Servant
 * try-haxe
     * Haxe の勉強
 * try-hubot
