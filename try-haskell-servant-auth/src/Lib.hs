@@ -8,39 +8,47 @@ module Lib
     ) where
 
 import Control.Monad.IO.Class (liftIO)
-import Data.Aeson
-import Data.Aeson.TH
+import Data.Aeson (ToJSON)
+import Data.Aeson.TH (deriveJSON, defaultOptions)
 import Data.ByteString (ByteString)
 import Data.Map (Map)
 import qualified Data.Map as Map
-import Data.Text
-import Network.Wai
-import Network.Wai.Handler.Warp
-import Servant
-import Servant.Server.Experimental.Auth
+import Data.Text (Text)
+import Network.Wai (Application, Request, requestHeaders)
+import Network.Wai.Handler.Warp (run)
+import Servant ((:<|>)((:<|>)), (:>), Get, JSON, Proxy(Proxy), Context((:.), EmptyContext), AuthProtect, throwError, err401, err403, errBody)
+import Servant.Server (Server, serveWithContext, Handler)
+import Servant.Server.Experimental.Auth (AuthServerData, AuthHandler, mkAuthHandler)
 
 
 newtype Account = Account { name :: Text } deriving Show
 $(deriveJSON defaultOptions ''Account)
 
+type API =
+         "account" :> AuthProtect "header-auth" :> Get '[JSON] Account
+    :<|> "public"  :> Get '[JSON] Text
+
+type instance AuthServerData (AuthProtect "header-auth") = Account
+
 database :: Map ByteString Account
 database = Map.fromList accounts
   where
-    accounts = [ ("key1", Account "Account1")
-               , ("key2", Account "Account2")
-               , ("key3", Account "Account3")
+    accounts = [ ("token1", Account "account1")
+               , ("token2", Account "account2")
+               , ("token3", Account "account3")
                ]
 
--- pseudo IO access
-select :: ByteString -> IO (Maybe Account)
-select key = return $ Map.lookup key database
+startApp :: IO ()
+startApp = run 3000 app
 
-lookupAccount :: ByteString -> Handler Account
-lookupAccount key = do
-    res <- liftIO $ select key
-    case res of
-        Just a  -> return a
-        Nothing -> throwError $ err403 { errBody = "Invalid token" }
+app :: Application
+app = serveWithContext api authServerContext server
+
+api :: Proxy API
+api = Proxy
+
+authServerContext :: Context (AuthHandler Request Account ': '[])
+authServerContext = authHandler :. EmptyContext
 
 authHandler :: AuthHandler Request Account
 authHandler = mkAuthHandler handler
@@ -50,26 +58,19 @@ authHandler = mkAuthHandler handler
             Just sid -> lookupAccount sid
             Nothing  -> throwError $ err401 { errBody = "Missing token header" }
 
-type API =
-         "account" :> AuthProtect "header-auth" :> Get '[JSON] Account
-    :<|> Get '[JSON] Text
+lookupAccount :: ByteString -> Handler Account
+lookupAccount token = do
+    res <- liftIO $ select token
+    case res of
+        Just a  -> return a
+        Nothing -> throwError $ err403 { errBody = "Invalid token" }
 
-type instance AuthServerData (AuthProtect "header-auth") = Account
-
-api :: Proxy API
-api = Proxy
-
-authServerContext :: Context (AuthHandler Request Account ': '[])
-authServerContext = authHandler :. EmptyContext
+-- pseudo IO access
+select :: ByteString -> IO (Maybe Account)
+select token = return $ Map.lookup token database
 
 server :: Server API
-server = protected :<|> unprotected
+server = account :<|> public
   where
-    protected   = return
-    unprotected = return "unprotected url"
-
-startApp :: IO ()
-startApp = run 3000 app
-
-app :: Application
-app = serveWithContext api authServerContext server
+    account = return
+    public  = return "public resource"
