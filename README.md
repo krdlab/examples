@@ -13,6 +13,8 @@ example projects
     * IO action モック化の実験
 * haskell-servant-webapp
     * haskell-servant を試してみた
+* message-to-command
+    * 実験的に作成した attention-based encoder-decoder NN によるメッセージ → コマンド列化処理
 * python-mcmc
     * Python の MCMC ライブラリ ([PyMC3](https://github.com/pymc-devs/pymc3))
 * ruby-matrix-vector-basic

@@ -1,0 +1,9 @@
+chainer
+numpy
+matplotlib
+scikit-learn
+scipy
+nltk
+jaconv
+mecab-python3
+pillow
