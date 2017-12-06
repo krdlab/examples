@@ -41,5 +41,7 @@ example projects
     * PureScript の勉強 (jQuery メイン)
 * try-react-and-redux
     * React と Redux の組み合わせを試す
+* try-typescript
+    * LT 会用の TypeScript サンプルプロジェクト
 * try-webpack-and-babel
     * webpack と babel の組み合わせを試す

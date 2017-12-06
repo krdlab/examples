@@ -1,0 +1,22 @@
+{
+  "name": "try-typescript",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "build": "rm -rf dest/*; tsc",
+    "tsc": "tsc"
+  },
+  "author": "krdlab",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/express": "^4.0.37",
+    "@types/node": "^8.0.46",
+    "eslint": "^4.10.0",
+    "tslint": "^5.8.0",
+    "typescript": "^2.5.3"
+  },
+  "dependencies": {
+    "express": "^4.16.2",
+    "scoped-http-client": "^0.11.0"
+  }
+}
