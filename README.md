@@ -5,6 +5,8 @@ example projects
 
 ## Project List
 
+* 20180413-tdd-and-mob
+    * 社内 TDD + モブプログラミング会のお題
 * delimited-continuation
     * shift/reset の勉強
 * distributed-rabbitmq-brokers
