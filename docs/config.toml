@@ -1,0 +1,24 @@
+baseURL = "https://examples.krdlab.com/"
+languageCode = "ja-jp"
+title = "krdlab's examples project"
+theme = "whisper"
+
+pygmentsCodeFences = true
+
+[[menu.main]]
+    name = "Home"
+    url = "/"
+    weight = 1
+
+[[menu.main]]
+    name = "Docs"
+    url = "/docs/"
+    weight = 2
+
+[params]
+    homepage_button_link = "/docs"
+    homepage_button_text = "Read the Docs"
+
+    [params.logo]
+        mobile = "/images/logo.svg"
+        standard = "/images/logo.svg"
