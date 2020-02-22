@@ -1,0 +1,19 @@
+{
+  "name": "proto-cli",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "bin": {
+    "proto-cli": "main.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "krdlab",
+  "license": "MIT",
+  "dependencies": {
+    "inquirer": "^7.0.4",
+    "mem-fs-editor": "^6.0.0",
+    "yeoman-environment": "^2.8.0"
+  }
+}
