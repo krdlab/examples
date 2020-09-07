@@ -5,45 +5,49 @@ example projects
 
 ## Project List
 
-* 20180413-tdd-and-mob
+1. 20180413-tdd-and-mob
     * 社内 TDD + モブプログラミング会のお題
-* delimited-continuation
+1. ansible-module-check-and-diff
+    * 自作 Ansible モジュールを check と diff に対応させる実験 ([ブログ記事](https://krdlab.hatenablog.com/entry/2018/05/29/080000))
+1. delimited-continuation
     * shift/reset の勉強
-* distributed-rabbitmq-brokers
+1. distributed-rabbitmq-brokers
     * RabbitMQ 分散構成の調査
-* haskell-io-test
+1. haskell-io-test
     * IO action モック化の実験
-* haskell-servant-webapp
+1. haskell-servant-webapp
     * haskell-servant を試してみた
-* message-to-command
+1. message-to-command
     * 実験的に作成した attention-based encoder-decoder NN によるメッセージ → コマンド列化処理
-* python-mcmc
+1. proto-cli
+    * yeoman-environment + mem-fs-editor + inquirer で作成した試作 CLI ([ブログ記事](https://krdlab.hatenablog.com/entry/2020/02/25/080000))
+1. python-mcmc
     * Python の MCMC ライブラリ ([PyMC3](https://github.com/pymc-devs/pymc3))
-* ruby-matrix-vector-basic
+1. ruby-matrix-vector-basic
     * 標準ライブラリの matrix
-* simple-scotty-webapp
+1. simple-scotty-webapp
     * 2014/02/16: ゆるふわ Haskell
-* try-chainer
+1. try-chainer
     * 「Chainer による実践深層学習」を使った勉強
-* try-electron
+1. try-electron
     * Electron + Vue.js
-* try-fay
+1. try-fay
     * Fay の勉強
-* try-haskell-servant-auth
+1. try-haskell-servant-auth
     * Authentication in Servant
-* try-haxe
+1. try-haxe
     * Haxe の勉強
-* try-hubot
+1. try-hubot
     * hubot の勉強
-* try-js-frameworks
+1. try-js-frameworks
     * JavaScript framework の勉強
-* try-purescript
+1. try-purescript
     * PureScirpt を色々試すためのプロジェクト
-* try-purescript-jquery
+1. try-purescript-jquery
     * PureScript の勉強 (jQuery メイン)
-* try-react-and-redux
+1. try-react-and-redux
     * React と Redux の組み合わせを試す
-* try-typescript
+1. try-typescript
     * LT 会用の TypeScript サンプルプロジェクト
-* try-webpack-and-babel
+1. try-webpack-and-babel
     * webpack と babel の組み合わせを試す
