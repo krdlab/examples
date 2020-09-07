@@ -41,6 +41,8 @@ example projects
     * hubot の勉強
 1. try-js-frameworks
     * JavaScript framework の勉強
+1. try-nix
+    * Nix を試す ([公式の Guide](https://nixos.org/manual/nix/stable/))
 1. try-purescript
     * PureScirpt を色々試すためのプロジェクト
 1. try-purescript-jquery
