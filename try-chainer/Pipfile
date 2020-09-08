@@ -1,0 +1,18 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+
+[packages]
+chainer = "==1.16.0"
+matplotlib = "*"
+mecab-python3 = "*"
+numpy = "*"
+scikit-learn = "*"
+scipy = "*"
+Pillow = ">=7.1.0"
+
+[requires]
+python_version = "3.8"
