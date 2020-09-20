@@ -2,7 +2,7 @@ FROM ubuntu
 
 RUN apt-get update && apt-get -y upgrade
 
-RUN apt-get -y install xz-utils curl man
+RUN apt-get -y install xz-utils curl man less
 
 RUN useradd -m student
 
