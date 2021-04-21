@@ -9,5 +9,10 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "krdlab",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-openid-connect": "^2.0.0"
+  }
 }
