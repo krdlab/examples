@@ -55,3 +55,5 @@ example projects
     * LT 会用の TypeScript サンプルプロジェクト
 1. try-webpack-and-babel
     * webpack と babel の組み合わせを試す
+1. use-express-openid-connect
+    * 去年試していた express-openid-connect のサンプルコード
