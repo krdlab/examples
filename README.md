@@ -51,6 +51,8 @@ example projects
     * PureScript の勉強 (jQuery メイン)
 1. try-react-and-redux
     * React と Redux の組み合わせを試す
+1. try-react-recoil
+    * React と Recoil の組み合わせを試す
 1. try-typescript
     * LT 会用の TypeScript サンプルプロジェクト
 1. try-webpack-and-babel
