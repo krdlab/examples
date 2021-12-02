@@ -1,0 +1,19 @@
+{
+  "name": "try-npm-workspace-with-ts",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "compile": "tsc -b tsconfig.build.json",
+    "start": "node packages/client/dist/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "workspaces": [
+    "packages/*"
+  ],
+  "devDependencies": {
+    "typescript": "^4.5.2"
+  }
+}
