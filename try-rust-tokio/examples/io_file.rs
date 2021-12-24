@@ -31,14 +31,14 @@ async fn use_read_to_end() -> Result<()> {
 }
 
 async fn use_write() -> Result<()> {
-    let mut f = File::open("foo.txt").await?;
+    let mut f = File::create("foo.txt").await?;
     let n = f.write(b"some bytes").await?;
     println!("Wrote the first {} bytes of 'some bytes'.", n);
     Ok(())
 }
 
 async fn use_write_all() -> Result<()> {
-    let mut f = File::open("foo.txt").await?;
+    let mut f = File::create("foo.txt").await?;
     f.write_all(b"some bytes").await?;
     Ok(())
 }
