@@ -7,6 +7,7 @@ async fn main() -> Result<()> {
     use_read_to_end().await?;
     use_write().await?;
     use_write_all().await?;
+    use_copy().await?;
     Ok(())
 }
 
@@ -40,5 +41,13 @@ async fn use_write() -> Result<()> {
 async fn use_write_all() -> Result<()> {
     let mut f = File::create("foo.txt").await?;
     f.write_all(b"some bytes").await?;
+    Ok(())
+}
+
+async fn use_copy() -> Result<()> {
+    let mut reader: &[u8] = b"hello";
+    let mut file = File::create("foo2.txt").await?;
+
+    tokio::io::copy(&mut reader, &mut file).await?;
     Ok(())
 }
