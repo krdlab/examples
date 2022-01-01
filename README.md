@@ -55,6 +55,9 @@ example projects
     * React と Redux の組み合わせを試す
 1. try-react-recoil
     * React と Recoil の組み合わせを試す
+1. try-rust-tokio
+    * Rust の tokio を学ぶ
+    * <https://tokio.rs/tokio/tutorial>
 1. try-typescript
     * LT 会用の TypeScript サンプルプロジェクト
 1. try-webpack-and-babel
