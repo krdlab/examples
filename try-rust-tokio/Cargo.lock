@@ -651,6 +651,7 @@ dependencies = [
  "bytes",
  "mini-redis",
  "tokio",
+ "tokio-stream",
 ]
 
 [[package]]
