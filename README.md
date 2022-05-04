@@ -19,6 +19,8 @@ example projects
     * haskell-servant を試してみた
 1. message-to-command
     * 実験的に作成した attention-based encoder-decoder NN によるメッセージ → コマンド列化処理
+1. my-blink
+    * 「組み込み Rust」の blink LED
 1. nodejs-express-with-cookie
     * Route 53 failover policy の動作確認用に作成した試験用サービス
 1. proto-cli

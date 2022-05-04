@@ -1,0 +1,8 @@
+[build]
+target = "thumbv7em-none-eabihf"
+
+[target.thumbv7em-none-eabihf]
+runner = "hf2 elf"
+rustflags = [
+  "-C", "link-arg=-Tlink.x",
+]
