@@ -6,7 +6,7 @@ use nom::{
     sequence::tuple,
     IResult,
 };
-use try_rust_nom::json::{self, root};
+use try_rust_nom::json::root;
 
 #[derive(Debug, PartialEq)]
 pub struct Color {
