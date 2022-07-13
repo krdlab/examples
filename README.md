@@ -57,6 +57,8 @@ example projects
     * React と Redux の組み合わせを試す
 1. try-react-recoil
     * React と Recoil の組み合わせを試す
+1. try-rust-nom
+    * Rust の nom を試す
 1. try-rust-tokio
     * Rust の tokio を学ぶ
     * <https://tokio.rs/tokio/tutorial>
