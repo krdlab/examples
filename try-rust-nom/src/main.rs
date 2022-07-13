@@ -6,6 +6,7 @@ use nom::{
     sequence::tuple,
     IResult,
 };
+use try_rust_nom::json::{self, root};
 
 #[derive(Debug, PartialEq)]
 pub struct Color {
@@ -34,6 +35,13 @@ fn hex_color(input: &str) -> IResult<&str, Color> {
 
 fn main() {
     println!("{:?}", hex_color("#ffffff"));
+
+    let data = r#"  { "a" : 42,
+        "b": ["x", "y", 12] ,
+        "c": { "hello" : "world"
+        }
+        } "#;
+    println!("{:?}", root(data));
 }
 
 #[test]
