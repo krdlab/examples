@@ -13,7 +13,7 @@
   "license": "MIT",
   "dependencies": {
     "inquirer": "^7.0.4",
-    "mem-fs-editor": "^6.0.0",
+    "mem-fs-editor": "^9.5.0",
     "yeoman-environment": "^2.8.0"
   }
 }
