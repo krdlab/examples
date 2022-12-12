@@ -19,6 +19,8 @@ example projects
     * haskell-servant を試してみた
 1. hello_macro-in-rust
     * "[How to Write a Custom derive Macro](https://doc.rust-lang.org/book/ch19-06-macros.html#how-to-write-a-custom-derive-macro)" を試してみた
+1. jni-load-test
+    * JNI の実験
 1. message-to-command
     * 実験的に作成した attention-based encoder-decoder NN によるメッセージ → コマンド列化処理
 1. my-blink
