@@ -1,3 +1,6 @@
+.metals/
+bin/
+a.out
 lib/*.h
 src/*.class
 src/*.so

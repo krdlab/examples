@@ -1,3 +1,5 @@
 FROM amazoncorretto:11
 
-RUN yum install -y gcc
+WORKDIR /work
+
+RUN yum install -y gcc && yum clean all
