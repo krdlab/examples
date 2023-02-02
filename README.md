@@ -23,6 +23,8 @@ example projects
     * JNI の実験
 1. message-to-command
     * 実験的に作成した attention-based encoder-decoder NN によるメッセージ → コマンド列化処理
+1. minimal-uefi-app
+    * 最小の UEFI アプリ
 1. my-blink
     * 「組み込み Rust」の blink LED
 1. nodejs-express-with-cookie
